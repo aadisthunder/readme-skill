@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="README Forge — four README variants, four agent skills, one launch kit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220" />
+      <stop offset="1" stop-color="#131f38" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" />
+      <stop offset="0.5" stop-color="#818cf8" />
+      <stop offset="1" stop-color="#c084fc" />
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#1e2b4a" />
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" rx="24" fill="url(#bg)" />
+  <rect width="1280" height="320" rx="24" fill="url(#dots)" />
+  <rect x="0" y="0" width="1280" height="6" fill="url(#accent)" />
+
+  <g transform="translate(80, 96)">
+    <rect x="0" y="0" width="56" height="56" rx="14" fill="url(#accent)" opacity="0.9" />
+    <path d="M16 14 h18 a6 6 0 0 1 6 6 v22 a6 6 0 0 0 -6 -6 h-18 z" fill="#0b1220" opacity="0.85" />
+    <path d="M40 14 h18 v22 a6 6 0 0 0 -6 -6 h-12 z" fill="#0b1220" opacity="0.55" />
+    <text x="76" y="36" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#f8fafc" letter-spacing="2">README FORGE</text>
+    <text x="78" y="74" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#94a3b8">Four README variants. Four agent skills. One launch kit.</text>
+  </g>
+
+  <g transform="translate(80, 220)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#cbd5e1">
+    <rect x="0" y="0" width="150" height="36" rx="18" fill="#16233d" stroke="#2b3d63" />
+    <text x="75" y="23" text-anchor="middle">A · Flagship</text>
+    <rect x="166" y="0" width="170" height="36" rx="18" fill="#16233d" stroke="#2b3d63" />
+    <text x="251" y="23" text-anchor="middle">B · Engineering</text>
+    <rect x="352" y="0" width="142" height="36" rx="18" fill="#16233d" stroke="#2b3d63" />
+    <text x="423" y="23" text-anchor="middle">C · Minimal</text>
+    <rect x="510" y="0" width="136" height="36" rx="18" fill="#16233d" stroke="#2b3d63" />
+    <text x="578" y="23" text-anchor="middle">D · Launch</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="README Forge — four README variants, four agent skills, one launch kit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220" />
+      <stop offset="1" stop-color="#131f38" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" />
+      <stop offset="0.5" stop-color="#818cf8" />
+      <stop offset="1" stop-color="#c084fc" />
+    </linearGradient>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.4" fill="#1e2b4a" />
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)" />
+  <rect width="1280" height="640" fill="url(#dots)" />
+  <rect x="0" y="0" width="1280" height="8" fill="url(#accent)" />
+
+  <g transform="translate(96, 176)">
+    <rect x="0" y="0" width="84" height="84" rx="20" fill="url(#accent)" opacity="0.9" />
+    <path d="M24 21 h27 a9 9 0 0 1 9 9 v33 a9 9 0 0 0 -9 -9 h-27 z" fill="#0b1220" opacity="0.85" />
+    <path d="M60 21 h27 v33 a9 9 0 0 0 -9 -9 h-18 z" fill="#0b1220" opacity="0.55" />
+    <text x="114" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#f8fafc" letter-spacing="3">README FORGE</text>
+    <text x="118" y="104" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#94a3b8">Ship open source that looks like it means it.</text>
+  </g>
+
+  <g transform="translate(96, 340)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#cbd5e1">
+    <rect x="0" y="0" width="186" height="46" rx="23" fill="#16233d" stroke="#2b3d63" />
+    <text x="93" y="29" text-anchor="middle">A · Flagship</text>
+    <rect x="202" y="0" width="212" height="46" rx="23" fill="#16233d" stroke="#2b3d63" />
+    <text x="308" y="29" text-anchor="middle">B · Engineering</text>
+    <rect x="430" y="0" width="176" height="46" rx="23" fill="#16233d" stroke="#2b3d63" />
+    <text x="518" y="29" text-anchor="middle">C · Minimal</text>
+    <rect x="622" y="0" width="170" height="46" rx="23" fill="#16233d" stroke="#2b3d63" />
+    <text x="707" y="29" text-anchor="middle">D · Launch</text>
+  </g>
+
+  <g transform="translate(96, 440)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#94a3b8">
+    <text x="0" y="0">4 README variants</text>
+    <text x="300" y="0">4 agent skills</text>
+    <text x="560" y="0">CI, launch assets, profile hub</text>
+  </g>
+
+  <text x="96" y="560" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#cbd5e1">github.com/aadisthunder</text>
+</svg>

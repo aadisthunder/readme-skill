@@ -1,0 +1,20 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (only used by validation tooling)
+node_modules/
+npm-debug.log*
+
+# Temp
+*.tmp
+*.log
+
+# Freebuff client state (local tooling, not repository content)
+.freebuff/

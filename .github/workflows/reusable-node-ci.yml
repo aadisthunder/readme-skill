@@ -1,0 +1,81 @@
+name: Reusable Node CI
+
+# Call it from another repository:
+#
+#   name: CI
+#   on:
+#     push:
+#       branches: [main]
+#     pull_request:
+#   jobs:
+#     test:
+#       uses: aadisthunder/readme-forge/.github/workflows/reusable-node-ci.yml@main
+#       with:
+#         node-version: "20"
+#         coverage: false
+#       # Only needed when coverage is true:
+#       # secrets:
+#       #   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node.js version to run the job with.
+        type: string
+        default: "20"
+      working-directory:
+        description: Directory containing package.json (for monorepos).
+        type: string
+        default: "."
+      coverage:
+        description: Upload coverage to Codecov. Requires the CODECOV_TOKEN secret.
+        type: boolean
+        default: false
+    secrets:
+      CODECOV_TOKEN:
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test (Node ${{ inputs.node-version }})
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          # Add npm caching only when the repository has a lockfile at the
+          # project root, otherwise setup-node fails the run:
+          #   cache: npm
+          #   cache-dependency-path: <working-directory>/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build production bundle
+        run: npm run build --if-present
+
+      - name: Upload coverage artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: ${{ inputs.working-directory }}/coverage
+          if-no-files-found: ignore
+
+      - name: Upload coverage to Codecov
+        if: ${{ inputs.coverage }}
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

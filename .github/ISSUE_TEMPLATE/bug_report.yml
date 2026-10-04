@@ -1,0 +1,43 @@
+name: Bug report
+description: Something in a template, skill, script, or doc is broken.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please search existing issues first — and for
+        questions rather than bugs, use Discussions.
+  - type: input
+    id: affected
+    attributes:
+      label: Affected file
+      description: Path to the template, skill, script, or doc.
+      placeholder: templates/A-flagship/README.md
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include the exact command and its output when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Where you used it (your repo, which variant) and anything else that helps.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I ran `node scripts/validate.mjs` and it passed.
+        - label: I searched existing issues for the same problem.
