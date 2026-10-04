@@ -8,7 +8,7 @@
 
 <p>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="License: MIT" /></a>
-  <img src="https://img.shields.io/badge/Agents-Antigravity%20%7C%20Claude%20%7C%20Cursor-7c3aed?style=for-the-badge" alt="Agent Support" />
+  <img src="https://img.shields.io/badge/Agents-Claude%20%7C%20Codex%20%7C%20Antigravity%20%7C%20Cursor-7c3aed?style=for-the-badge" alt="Agent Support" />
   <img src="https://img.shields.io/badge/Format-Standard%20SKILL.md-2563eb?style=for-the-badge" alt="Format: SKILL.md" />
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" alt="PRs Welcome" /></a>
 </p>
@@ -29,7 +29,7 @@
 
 ## What is README Skill?
 
-**README Skill** is a lightweight, portable skill package (`SKILL.md`) for AI coding agents such as **Google Antigravity**, **Claude Code**, **Cursor**, **GitHub Copilot**, and **Codex**.
+**README Skill** is a lightweight, portable skill package (`SKILL.md`) for AI coding agents such as **Claude Code**, **Codex**, **Antigravity**, **Cursor**, and **GitHub Copilot**.
 
 When loaded into an agent's environment, it instructs the assistant to analyze your actual codebase and synthesize a **flagship open-source README** featuring:
 - **Centered Hero Branding:** Crisp logos, bold 1-sentence value propositions, and curated Shields.io badges.
@@ -101,25 +101,7 @@ sequenceDiagram
 
 Install the skill in your project or global agent directory in seconds.
 
-### Option 1: Antigravity IDE / AGY (Recommended)
-
-To install for your current project workspace, copy the skill into your `.agents` folder:
-
-```bash
-# From your project root:
-mkdir -p .agents/skills/readme
-curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o .agents/skills/readme/SKILL.md
-```
-
-Or install **globally** across all your Antigravity workspaces:
-
-```bash
-# Global Antigravity configuration directory:
-mkdir -p ~/.gemini/config/skills/readme
-curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o ~/.gemini/config/skills/readme/SKILL.md
-```
-
-### Option 2: Claude Code
+### Option 1: Claude Code
 
 To add to Claude Code's global skill directory:
 
@@ -128,12 +110,43 @@ mkdir -p ~/.claude/skills/readme
 curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o ~/.claude/skills/readme/SKILL.md
 ```
 
-### Option 3: Cursor, GitHub Copilot & Other Agents
+Or add to your current project workspace:
+
+```bash
+mkdir -p .claude/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o .claude/skills/readme/SKILL.md
+```
+
+### Option 2: Codex
+
+To install for Codex in your project workspace:
+
+```bash
+mkdir -p .codex/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o .codex/skills/readme/SKILL.md
+```
+
+### Option 3: Antigravity
+
+To install for your current project workspace, copy the skill into your `.agents` folder:
+
+```bash
+mkdir -p .agents/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o .agents/skills/readme/SKILL.md
+```
+
+Or install globally across all your Antigravity workspaces:
+
+```bash
+mkdir -p ~/.gemini/config/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o ~/.gemini/config/skills/readme/SKILL.md
+```
+
+### Option 4: Cursor, GitHub Copilot & Other Agents
 
 Clone or copy `.agents/skills/readme/SKILL.md` directly into your workspace rules or prompt catalog:
 
 ```bash
-# Clone the repository:
 git clone https://github.com/aadisthunder/readme-skill.git
 ```
 
