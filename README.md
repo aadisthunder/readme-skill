@@ -1,244 +1,236 @@
-<p align="center">
-  <img src="assets/banner.svg" alt="README Forge — four README variants, four agent skills, one launch kit" width="100%" />
+<div align="center">
+
+# 🛠️ README Skill
+
+<p>
+  <strong>A unified, production-grade agent skill that teaches AI coding assistants how to craft high-converting, authentic, and beautifully designed project READMEs.</strong>
 </p>
 
-<h1 align="center">README Forge</h1>
-
-<p align="center">
-  <strong>Ship open source that looks like it means it.</strong><br />
-  Four README variants · four agent skills · a launch kit — everything a project needs to go from <em>code works</em> to <em>strangers can adopt it</em>.
-</p>
-
-<p align="center">
+<p>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="License: MIT" /></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" alt="PRs welcome" /></a>
-  <img src="https://img.shields.io/badge/Variants-4-7c3aed?style=for-the-badge" alt="Four README variants" />
-  <img src="https://img.shields.io/badge/Skills-4-2563eb?style=for-the-badge" alt="Four agent skills" />
+  <img src="https://img.shields.io/badge/Agents-Antigravity%20%7C%20Claude%20%7C%20Cursor-7c3aed?style=for-the-badge" alt="Agent Support" />
+  <img src="https://img.shields.io/badge/Format-Standard%20SKILL.md-2563eb?style=for-the-badge" alt="Format: SKILL.md" />
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" alt="PRs Welcome" /></a>
 </p>
 
-<p align="center">
-  <a href="#install-it">Install</a> •
-  <a href="#quick-start">Quick start</a> •
-  <a href="#variants">Variants</a> •
-  <a href="#skills">Skills</a> •
-  <a href="#launch-kit">Launch kit</a> •
-  <a href="#faq">FAQ</a>
+<p>
+  <a href="#what-is-readme-skill">What It Is</a> •
+  <a href="#why-this-exists">Why This Exists</a> •
+  <a href="#how-it-works">How It Works</a> •
+  <a href="#installation--setup">Installation &amp; Setup</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#visual-showcase">Visual Showcase</a> •
+  <a href="#contributing">Contributing</a>
 </p>
+
+</div>
 
 ---
 
-## What this is
+## What is README Skill?
 
-- **A README system, not a template.** Four variants — Flagship, Engineering, Minimal, Launch — chosen by what the reader must do next.
-- **Agent skills that do the work.** `readme-forge`, `oss-launch`, `profile-readme`, and `badge-ci` are step-by-step procedures with output contracts and verification rules.
-- **A launch kit.** Contributing guides, security policy, issue and PR templates, CI, dynamic badge recipes, a profile README, and a 40-item launch checklist.
-- **Worked examples.** Three complete READMEs written for real repositories, so you can see each variant applied instead of imagining it.
+**README Skill** is a lightweight, portable skill package (`SKILL.md`) for AI coding agents such as **Google Antigravity**, **Claude Code**, **Cursor**, **GitHub Copilot**, and **Codex**.
 
-Built for developers, students, and maintainers who want their repositories
-to be taken seriously — by reviewers, recruiters, contributors, and strangers.
+When loaded into an agent's environment, it instructs the assistant to analyze your actual codebase and synthesize a **flagship open-source README** featuring:
+- **Centered Hero Branding:** Crisp logos, bold 1-sentence value propositions, and curated Shields.io badges.
+- **Tech Stack Badges:** Official tech logos and coherent color palettes.
+- **Mermaid Architecture Diagrams:** Clean flowcharts and request-lifecycle sequence diagrams.
+- **Responsive Two-Column Feature Matrices:** High-density, beautifully structured feature cards instead of flat bullet lists.
+- **Evidence-First Verification:** Zero invented metrics or hallucinated scripts — every command is paired with real codebase evidence.
 
-## The rule this kit enforces
+---
 
-> **No invented numbers.** Every metric in a README must sit next to the
-> command that reproduces it. A claim you cannot run is a claim you should not
-> make.
+## Why This Exists
 
-That single rule separates READMEs that get starred from READMEs that get
-closed. The skills check for it; the validator nudges you toward it.
+Most AI assistants generate bland, generic README files filled with placeholder text, non-existent CLI flags, and dry bullet lists that fail to communicate what makes a project special.
 
-## How it works
+**README Skill** changes that by encoding the exact design language, layout standards, and evidence discipline found in top-tier open-source projects:
 
-In plain terms: pick the variant by what your reader must do next, fill it
-with real evidence from your repository, verify every claim, then add the
-launch extras before you publish.
+| Dimension | Default AI Generated README | README Skill Output |
+| :--- | :--- | :--- |
+| **Above the Fold** | Plain markdown title and wall of text | Centered hero branding, key badges, and anchor navigation |
+| **Architecture** | Missing or vague text description | Visual Mermaid flowcharts and sequence diagrams |
+| **Features** | Unformatted, repetitive bullet lists | Scannable, 2-column responsive HTML feature tables |
+| **Accuracy** | Guessed commands and fake benchmark stats | Evidence-grounded commands verified from project manifests |
+| **Visual Appeal** | Minimal / looks like raw notes | High-converting SaaS / flagship open-source aesthetic |
+
+---
+
+## How It Works
+
+The skill guides the agent through an autonomous 5-stage synthesis pipeline:
 
 ```mermaid
 flowchart LR
-  A[Audit the repository] --> B{What does the reader need?}
-  B -->|try the product| C[A · Flagship]
-  B -->|trust the internals| D[B · Engineering]
-  B -->|install and leave| E[C · Minimal]
-  B -->|star, try, contribute| F[D · Launch]
-  C & D & E & F --> G[Fill with real evidence]
-  G --> H[Verify every claim]
-  H --> I[Launch assets: topics, social preview, releases, CI]
+  A[1. Audit Codebase] --> B[2. Detect Archetype]
+  B --> C[3. Build Hero & Stack]
+  C --> D[4. Diagram & Matrix]
+  D --> E[5. Verify & Deliver]
+  
+  subgraph Evidence Discipline
+    A -.- A1["Manifests & Scripts"]
+    A -.- A2["Entry Points & Configs"]
+  end
+
+  subgraph Presentation Engine
+    C -.- C1["Curated Shields Badges"]
+    D -.- D1["Mermaid Flowcharts"]
+    D -.- D2["2-Column Feature Tables"]
+  end
 ```
 
-## Install it
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Dev as Developer
+  participant Agent as AI Coding Agent
+  participant Skill as README SKILL.md
+  participant Repo as Project Codebase
 
-There is nothing to build — this repository is Markdown files, four agent
-skills, and one small checker script. Three ways to adopt it:
+  Dev->>Agent: "Create a flagship README for my project"
+  Agent->>Skill: Load instructions & structural patterns
+  Agent->>Repo: Inspect package manifests, scripts, and entry points
+  Repo-->>Agent: Returns real stack & verified runnable commands
+  Agent->>Agent: Synthesize hero, architecture diagrams & feature matrix
+  Agent-->>Dev: Delivers publication-ready, verified README.md
+```
 
-### 1. Use a template in your own project
+---
 
-1. Pick a variant in [`templates/README.md`](templates/README.md) (A, B, C, or D).
-2. Copy that variant's `README.md` over your project's `README.md`.
-3. Replace every `{{TOKEN}}` using the [token table](templates/README.md#tokens).
-4. Delete the guidance comments and push.
+## Installation & Setup
 
-### 2. Copy the whole kit into an existing repository
+Install the skill in your project or global agent directory in seconds.
 
-| Copy | To get |
-| :--- | :--- |
-| `templates/` | The four README variants |
-| `.agents/skills/` | The four agent skills (clients read each `SKILL.md`) |
-| `.github/` | Issue forms, PR template, CI, funding |
-| `docs/` | Research, checklists, and badge recipes |
-| `examples/` | Filled drafts for real projects, to compare against |
+### Option 1: Antigravity IDE / AGY (Recommended)
 
-Requirements: none beyond Git. Node.js 18+ is needed only to run the
-optional checker (`node scripts/validate.mjs`).
-
-### 3. Let your coding agent do it
-
-Ask your agent: *"Use the `readme-forge` skill on this repository."* The skill
-gathers evidence, fills the variant, verifies every claim, and reports what
-it changed. The other three skills work the same way: `oss-launch`,
-`profile-readme`, `badge-ci`.
-
-## Quick start
+To install for your current project workspace, copy the skill into your `.agents` folder:
 
 ```bash
-git clone https://github.com/aadisthunder/readme-forge.git
-cd readme-forge
-node scripts/validate.mjs          # structural check
-npx --yes markdownlint-cli2       # markdown hygiene (config-driven globs)
+# From your project root:
+mkdir -p .agents/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o .agents/skills/readme/SKILL.md
 ```
 
-**Use a template:**
+Or install **globally** across all your Antigravity workspaces:
 
-1. Open [`templates/README.md`](templates/README.md) and pick a variant.
-2. Copy that variant's `README.md` over your project's README.
-3. Replace every `{{TOKEN}}` using [the token table](templates/README.md#tokens).
-4. Re-run the validator until it passes.
+```bash
+# Global Antigravity configuration directory:
+mkdir -p ~/.gemini/config/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o ~/.gemini/config/skills/readme/SKILL.md
+```
 
-**Use a skill:** ask your coding agent to *"use the `readme-forge` skill on
-this repository"* (or `oss-launch`, `profile-readme`, `badge-ci`). Each skill
-is self-contained: evidence pass, procedure, verification, output contract.
+### Option 2: Claude Code
 
-## Variants
+To add to Claude Code's global skill directory:
 
-| Variant | For | Signature |
-| :--- | :--- | :--- |
-| [**A — Flagship**](templates/A-flagship/README.md) | Products with a UI or live demo | Banner, GIF, screenshot gallery, feature grid, comparison table |
-| [**B — Engineering**](templates/B-engineering/README.md) | Engines, SDKs, anything judged on internals | Flow, sequence, and ER diagrams; module map; decisions and trade-offs; reproducible test table |
-| [**C — Minimal**](templates/C-minimal/README.md) | Sharp libraries with great docs elsewhere | One image, three commands, links, done |
-| [**D — Launch**](templates/D-launch/README.md) | Launch day and portfolio centerpieces | Story, animated proof, metrics with reproduce commands, community table, roadmap |
+```bash
+mkdir -p ~/.claude/skills/readme
+curl -fsSL https://raw.githubusercontent.com/aadisthunder/readme-skill/main/.agents/skills/readme/SKILL.md -o ~/.claude/skills/readme/SKILL.md
+```
 
-Full guide: [docs/variants.md](docs/variants.md) · Research behind them:
-[docs/patterns.md](docs/patterns.md).
+### Option 3: Cursor, GitHub Copilot & Other Agents
 
-## Skills
+Clone or copy `.agents/skills/readme/SKILL.md` directly into your workspace rules or prompt catalog:
 
-| Skill | What it produces |
-| :--- | :--- |
-| [`readme-forge`](.agents/skills/readme-forge/SKILL.md) | A finished README in the chosen variant, plus a fill report mapping every claim to its source |
-| [`oss-launch`](.agents/skills/oss-launch/SKILL.md) | A weighted readiness score (100 points), a prioritized fix plan, and the missing launch assets as real files |
-| [`profile-readme`](.agents/skills/profile-readme/SKILL.md) | A build-in-public GitHub profile hub with curated badges, stats, and project cards |
-| [`badge-ci`](.agents/skills/badge-ci/SKILL.md) | A working workflow plus honest, dynamic badges — and the pitfalls that make badges show "no status" |
+```bash
+# Clone the repository:
+git clone https://github.com/aadisthunder/readme-skill.git
+```
 
-## Worked examples
+---
 
-| Example | Variant | What it demonstrates |
-| :--- | :--- | :--- |
-| [examples/college-erp](examples/college-erp/README.md) | A · Flagship | Turning a feature list into a product page — with an honest security disclaimer |
-| [examples/bravo](examples/bravo/README.md) | B · Engineering | Architecture diagrams, a module map, and decisions with trade-offs |
-| [examples/pragati](examples/pragati/README.md) | D · Launch | Story, provable metrics, learner-model tables, community and roadmap |
+## How to Use
 
-## Launch kit
-
-| Asset | Path |
-| :--- | :--- |
-| Contributing guide | [CONTRIBUTING.md](CONTRIBUTING.md) |
-| Code of conduct | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) |
-| Security policy | [SECURITY.md](SECURITY.md) |
-| Issue forms | [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/config.yml) |
-| Pull request template | [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) |
-| CI for this repo | [.github/workflows/ci.yml](.github/workflows/ci.yml) |
-| Reusable Node CI | [.github/workflows/reusable-node-ci.yml](.github/workflows/reusable-node-ci.yml) |
-| Dynamic badge recipes | [docs/dynamic-badges.md](docs/dynamic-badges.md) |
-| Launch checklist | [docs/launch-checklist.md](docs/launch-checklist.md) |
-| Growth plan (topics, release, good first issues) | [docs/growth.md](docs/growth.md) |
-| Profile README hub | [profile/README.md](profile/README.md) |
-| Banner and social preview | [assets/](assets/banner.svg) |
-
-## Repository layout
+Once installed, simply prompt your agent naturally:
 
 ```text
-readme-forge/
-├── templates/             # four README variants + token reference
-├── examples/              # three worked READMEs from real repositories
-├── .agents/skills/        # four agent skills (SKILL.md per skill)
-├── docs/                  # research, variant guide, checklists, badge recipes
-├── profile/               # GitHub profile README hub
-├── assets/                # banner and social preview (SVG)
-├── scripts/validate.mjs   # tokens, links, fences, skill frontmatter
-└── .github/               # CI, issue and PR templates, funding
+"Inspect this repository and generate a flagship, production-grade README using the readme skill."
 ```
 
-## Roadmap
+```text
+"Upgrade our existing README.md: add a centered hero header, Mermaid architecture flowchart, and a two-column feature matrix."
+```
 
-- [x] Four README variants with a token reference
-- [x] Four agent skills with verification and output contracts
-- [x] Launch kit, CI, and the profile hub
-- [ ] Variant E: documentation-site README for large projects
-- [ ] Automated demo-GIF pipeline (record, compress, embed)
-- [ ] `npx readme-forge init` CLI that copies a variant and fills git metadata
-- [ ] Translations (Hindi first)
+The agent will automatically:
+1. Discover and activate the `readme` skill.
+2. Inspect your codebase files (`package.json`, `pyproject.toml`, Docker files, test scripts).
+3. Generate a complete, polished `README.md` ready to commit.
 
-## FAQ
+---
 
-<details>
-<summary><strong>Do I need an AI agent to use this?</strong></summary>
+## Visual Showcase
 
-No. The templates and docs are plain Markdown. The skills simply automate the
-evidence pass, the fill, and the verification if your agent supports them.
+Here is a preview of the signature components the skill creates:
 
-</details>
+### 1. Centered Hero & Navigation
+```markdown
+<div align="center">
+  <img src="public/logo.svg" width="90" alt="Logo" />
+  <h1>Project Name</h1>
+  <p><strong>A privacy-first AI assistant running entirely in your browser.</strong></p>
+  <a href="#quick-start">Quick Start</a> • <a href="#features">Features</a> • <a href="#architecture">Architecture</a>
+</div>
+```
 
-<details>
-<summary><strong>Can I use this for non-software projects?</strong></summary>
+### 2. Responsive Two-Column Feature Matrix
+```html
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🤖 Autonomous Tools</h3>
+      <ul>
+        <li>Real-time web search via Tavily</li>
+        <li>Deterministic arithmetic calculator</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛡️ Deterministic Guardrails</h3>
+      <ul>
+        <li>Regex pattern filtering for private keys</li>
+        <li>Zero-latency client-side validation</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+```
 
-Yes — the variants are about reader intent, not code. Flagship works for
-courses and datasets, Engineering for research methods, Launch for
-communities. Delete sections a project cannot support rather than padding them.
+### 3. Clean Mermaid Flowcharts
+```mermaid
+flowchart LR
+  Prompt[User Input] --> Guard[Guardrails]
+  Guard --> Agent[Decision Engine]
+  Agent --> Tools[Autonomous Tools]
+  Tools --> Agent
+  Agent --> Stream[Live Response]
+```
 
-</details>
+---
 
-<details>
-<summary><strong>Will this make every repo look the same?</strong></summary>
+## Repository Structure
 
-Consistency in structure, not in voice. The kit fixes the skeleton — hero,
-proof, quick start, license — so projects stop hiding their best material.
-Voice and content stay yours; the examples show three deliberately different
-tones.
+This repository is intentionally minimal and token-efficient. No heavy scripts, binary asset folders, or bloated dependencies:
 
-</details>
+```
+readme-skill/
+├── .agents/
+│   └── skills/
+│       └── readme/
+│           └── SKILL.md       # The core agent skill definition
+├── .gitignore                 # Clean environment & OS exclusions
+├── CONTRIBUTING.md            # Guidelines for skill enhancements
+├── LICENSE                    # MIT License
+├── README.md                  # Project overview & documentation
+└── SECURITY.md                # Responsible security disclosure
+```
 
-<details>
-<summary><strong>The validator flags my README. Now what?</strong></summary>
-
-Each message names the file and the problem: an unresolved `{{TOKEN}}` outside
-`templates/`, a broken relative link, unbalanced code fences, or a skill whose
-frontmatter does not match its folder. Fix, re-run, done.
-
-</details>
+---
 
 ## Contributing
 
-Contributions are welcome — read [CONTRIBUTING.md](CONTRIBUTING.md) and run
-both local checks before opening a pull request.
+Contributions, feature suggestions, and new framework badge templates are welcome! Please check out [CONTRIBUTING.md](file:///CONTRIBUTING.md) to get started.
+
+---
 
 ## License
 
-Released under the MIT license — see [LICENSE](LICENSE).
-
-<p align="center">
-  <sub>Inspired by the projects that do this best:
-  <a href="https://github.com/matiassingers/awesome-readme">awesome-readme</a>,
-  <a href="https://github.com/shadcn-ui/ui">shadcn/ui</a>,
-  <a href="https://github.com/supabase/supabase">Supabase</a>,
-  <a href="https://github.com/ohmyzsh/ohmyzsh">Oh My Zsh</a>, and
-  <a href="https://github.com/thedotmack/claude-mem">claude-mem</a>.
-  If this kit is useful to you, a ⭐ is the cheapest way to say thanks.</sub>
-</p>
+Released under the [MIT License](file:///LICENSE). Created with pride by [@aadisthunder](https://github.com/aadisthunder).

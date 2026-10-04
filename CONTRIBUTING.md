@@ -1,70 +1,24 @@
-# Contributing
+# Contributing to README Skill
 
-Thanks for helping make project READMEs better. This repository ships
-templates, agent skills, and small scripts — the review bar is quality of
-thinking, not lines of code.
+Thank you for contributing to **README Skill**! This repository provides a unified, production-grade agent skill designed to help AI coding assistants craft authentic, high-converting, and beautiful READMEs.
 
-## Ways to contribute
+## How You Can Help
 
-- **Improve a variant** — sharper structure, better examples, clearer tokens.
-- **Add evidence** — a pattern from a README that works, with a link.
-- **Extend a skill** — a missing step, a guardrail, a verification command.
-- **Fix docs** — typos, broken links, unclear instructions are real bugs here.
-- **Report friction** — say which template was confusing while you used it.
+- **Enhance Skill Workflows:** Improve the detection logic, tech-stack badge mappings, or architecture diagram generators in [SKILL.md](file:///.agents/skills/readme/SKILL.md).
+- **Refine Prompt Guidance:** Add guardrails preventing agents from hallucinating commands or fake benchmark numbers.
+- **Improve Documentation:** Clarify setup and installation guides for different agent ecosystems (Antigravity IDE, Claude Code, Cursor, Copilot).
+- **Report Friction:** Share edge cases where the skill struggled with a unique repository layout or monorepo structure.
 
-## Before you start
+## Core Rules for Contributions
 
-- For anything larger than a typo, open an issue first and describe the
-  outcome you want. This avoids two people rewriting the same template.
-- One idea per pull request.
+1. **Evidence-First Discipline:** The skill strictly enforces that agents only document what actually exists in a repository. No fabricated features, fake test counts, or unverified claims.
+2. **Lean & Portable:** Keep the skill self-contained within `.agents/skills/readme/SKILL.md`. Avoid adding unnecessary heavy scripts or binary files.
+3. **Accessibility & Clarity:** All badge templates, tables, and Mermaid snippets must be responsive, accessible (proper image alt text), and easy to scan.
+4. **Token Efficiency:** Keep instructions crisp and well-structured so agents don't consume unnecessary context window tokens.
 
-## House rules
+## Proposing Changes
 
-1. **No invented metrics or claims.** If a template shows a number, it must
-   come with a reproduce command.
-2. **Templates use `{{TOKENS}}`; everything else must not.** The validator
-   enforces this.
-3. **Examples are real.** Files under `examples/` must describe repositories
-   that exist and facts that are true at the time of writing.
-4. **Skills are procedures, not essays.** Steps must be executable and the
-   output contract must say exactly what the agent returns.
-5. **Keep above-the-fold discipline.** Name, one-liner, at most four badges.
-6. **Accessibility is not optional.** Alt text on every image, real text in
-   headings, sufficient contrast in SVG assets.
-
-## Local checks
-
-```bash
-# Structural validation (tokens, links, fences, skill frontmatter)
-node scripts/validate.mjs
-
-# Markdown hygiene
-npx --yes markdownlint-cli2
-```
-
-Both must pass. CI runs exactly these two commands.
-
-## Editing skills
-
-A skill lives at `.agents/skills/<name>/SKILL.md` and starts with:
-
-```yaml
----
-name: <folder-name>
-description: One sentence: what it does, what it produces, when to use it.
----
-```
-
-Then, in order: *when to use*, *inputs/evidence*, *procedure*, *rules*,
-*verification*, *output contract*. Keep it under ~150 lines.
-
-## Pull request process
-
-1. Fork, then branch: `git checkout -b improve/engineering-variant`.
-2. Make the change and run both local checks.
-3. Open a PR using the template. Fill in what changed and why.
-4. Expect review comments about evidence, not style preference.
-
-## Code of conduct
-
-By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
+1. Fork the repository and create your feature branch (`git checkout -b feat/enhance-skill`).
+2. Make your targeted changes to [SKILL.md](file:///.agents/skills/readme/SKILL.md) or [README.md](file:///README.md).
+3. Verify that the Markdown formatting renders cleanly.
+4. Open a clear Pull Request detailing what was improved and why.

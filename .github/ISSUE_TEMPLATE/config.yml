@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Questions and ideas
-    url: https://github.com/aadisthunder/readme-forge/discussions
-    about: Open-ended questions, show-and-tell, and design discussions.
-  - name: Security report
-    url: https://github.com/aadisthunder/readme-forge/security/advisories/new
-    about: Privately report a vulnerability. Do not open a public issue.

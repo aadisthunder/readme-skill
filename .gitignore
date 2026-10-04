@@ -1,20 +1,53 @@
-# OS noise
+# Operating System files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# Editors
+# Editors and IDEs
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
 
-# Node (only used by validation tooling)
+# Node / Package managers
 node_modules/
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
 
-# Temp
+# Python / Environment caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Build and temporary files
+dist/
+build/
+out/
+tmp/
+temp/
 *.tmp
+*.temp
 *.log
+*.bak
+*.orig
 
-# Freebuff client state (local tooling, not repository content)
+# Local client state & scratchpads
 .freebuff/
+.cache/
+.agent-scratch/
+testing/
